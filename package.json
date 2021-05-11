@@ -1,0 +1,31 @@
+{
+  "name": "crookedpilots",
+  "version": "1.0.0",
+  "description": "----------------",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/02Dade12/crookedpilots.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/02Dade12/crookedpilots/issues"
+  },
+  "homepage": "https://github.com/02Dade12/crookedpilots#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.6.2",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0"
+  }
+}
