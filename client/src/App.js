@@ -1,21 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Events from "./Pages/Events";
-import Contact from "./Components/Contact"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import About from "./pages/About";
+import Admin from "./pages/Admin";
+import Contact from "./pages/Contact"
+import Dashboard from "./pages/Dashboard"
+import Events from "./pages/Events";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+
 
 function App() {
   return (
     <Router>
       <div>
         <Navbar />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route path="/events" component={Events} />
+        <Route path="/about" component={About} />
+        <Route path="/admin" component={Admin} />
         <Route path="/contact" component={Contact} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/events" component={Events} />
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login} />
         <Footer />
       </div>
     </Router>
