@@ -33,6 +33,9 @@ Sanity
     To post, edit, & delete events
     Update bio
 
+Bootstrap CSS
+    Frontend Framework
+
 *Band Website*
 
 Navbar
