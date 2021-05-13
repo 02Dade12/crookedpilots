@@ -15,6 +15,11 @@ Coding Requirements
 ●Must not expose sensitive API key information on the server
 
 ----------------
+NPM Packages
+    Sanity
+    Bootstrap
+    Axios
+    react-router-dom
 
 MySQL
     User authentication (login), contacts, youtube video links
@@ -62,3 +67,4 @@ Admin Login
     Can add, delete, and update events
     Add bio and images
     Update youtube links
+
