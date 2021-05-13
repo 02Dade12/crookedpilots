@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from "react";
 import {Link} from "react-router-dom";
 import sanityClient from "../client";
-import image from "../whitewood.jpg"
+
 
 export default function Event(){
    
@@ -25,10 +25,7 @@ useEffect(() => {
 
     return (
          <main>
-               <img 
-                 src={image} 
-                 alt= "Wooden Background" 
-                 className="absolute object-cover w-full h-full"/>
+            
              <div className="min-h-screen p-12">
              <section className= "container mx-auto">
                  {/* <h1 className= "text-5xl flex justify-center cursive z-50">Here Lies my Blog Posts</h1>

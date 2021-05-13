@@ -7,6 +7,7 @@ import Admin from "./pages/Admin";
 import Contact from "./pages/Contact"
 import Dashboard from "./pages/Dashboard"
 import Events from "./pages/Events";
+import Event from "./components/Event"
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 
@@ -20,7 +21,7 @@ function App() {
         <Route path="/admin" component={Admin} />
         <Route path="/contact" component={Contact} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/events" component={Events} />
+        <Route path="/events" component={Event} />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Footer />
