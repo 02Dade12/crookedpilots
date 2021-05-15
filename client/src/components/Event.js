@@ -25,7 +25,7 @@ useEffect(() => {
 
     return (
          <main>
-            
+
              <div className="min-h-screen p-12">
              <section className= "container mx-auto">
                  {/* <h1 className= "text-5xl flex justify-center cursive z-50">Here Lies my Blog Posts</h1>

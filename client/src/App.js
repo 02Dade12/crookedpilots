@@ -6,10 +6,9 @@ import About from "./pages/About";
 import Admin from "./pages/Admin";
 import Contact from "./pages/Contact"
 import Dashboard from "./pages/Dashboard"
-import Events from "./pages/Events";
-import Event from "./components/Event"
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Event from "./components/Event";
 
 
 function App() {
