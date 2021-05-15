@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import sanityClient from "../client";
 
 
-export default function Post(){
+export default function Event(){
    
 const [eventData,setEvent] = useState(null);
 useEffect(() => {
