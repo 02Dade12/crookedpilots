@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const routes = require("./routes");
 const session = require('express-session');
 // const routes = require('./controllers');
 // var compression = require('compression')
@@ -29,7 +30,7 @@ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client"));
+  app.use(express.static("client/build"));
 }
 
 // app.use(routes);
