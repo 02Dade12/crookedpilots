@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard"
 import Events from "./pages/Events";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Post from "./components/Post"
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Route path="/admin" component={Admin} />
         <Route path="/contact" component={Contact} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/events" component={Events} />
+        <Route path="/events" component={Post} />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Footer />
