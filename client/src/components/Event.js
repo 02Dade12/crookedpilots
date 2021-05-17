@@ -26,7 +26,7 @@ useEffect(() => {
     return (
          <main>
 
-             <div className="min-h-screen p-12">
+             <div className="container">
              <section className= "container mx-auto">
                  {/* <h1 className= "text-5xl flex justify-center cursive z-50">Here Lies my Blog Posts</h1>
                  <h2 className= "text-lg text-gray-600 flex justify-center mb-12 z-50">Messages in a Bottle</h2> */}
