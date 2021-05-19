@@ -1,11 +1,15 @@
 import React from "react";
 import pic1 from "./pictures/pic1.png";
+import band from "./pictures/band.jpg";
 import album1 from "./pictures/album1.png";
-import laurence from "./pictures/laurence.jpeg";
+import albumArt1 from "./pictures/albumArt1.png";
+import albumArt2 from "./pictures/albumArt2.png";
+import albumArt3 from "./pictures/albumArt3.png";
+import laurence from "./pictures/laurence.jpg";
 import maurico from "./pictures/maurico.jpeg";
 import ivan from "./pictures/ivan.jpeg";
 
-import "./homePage.css"
+import "./css/homePage.css"
 
 
 function Home() {
@@ -26,18 +30,7 @@ function Home() {
               <div class="container">
                 <div class="carousel-caption">
                 <img src={pic1} class="align-self-center carousel-background-img"></img>
-                  <p>"Press play to take flight"</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#000000"/></svg>
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Some representative placeholder content for the second slide of the carousel.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                  <p>"Join us & take flight"</p>
                 </div>
               </div>
             </div>
@@ -46,12 +39,26 @@ function Home() {
               <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#000000"/></svg>
               <div class="container">
                 <div class="carousel-caption text-end">
-                  <h1>One more for good measure.</h1>
-                  <p>Some representative placeholder content for the third slide of this carousel.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                <img src={albumArt1} class="align-self-center albumArt"></img>
+                <img src={albumArt3} class="align-self-center albumArt"></img>
+                <img src={albumArt2} class="align-self-center albumArt"></img>
+                
+                  <h1>Check us out on all major platforms</h1>
+                  <p>Apple Music, Spotify, Sound Cloud, & YouTube.</p>
                 </div>
               </div>
             </div>
+
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#000000"/></svg>
+              <div class="container">
+                <div class="carousel-caption">
+                <img src={band} class="align-self-center band-pictures"></img>
+                </div>
+              </div>
+            </div>
+
+            
           </div>
 
           <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -68,15 +75,8 @@ function Home() {
       {/* Band Members Below */}
         <div class="container marketing">
           <div class="row">
-            <div class="col-lg-4">
-              <img class="bandmember rounded-circle" src={laurence}></img>
-      
-              <h2>Laurence J. Colleton</h2>
-              <p>Bass Guitar</p>
-              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-            </div>
 
-            <div class="col-lg-4">
+          <div class="col-lg-4">
             <img class="bandmember rounded-circle" src={maurico}></img>
               <h2>Maurico Donoso</h2>
               <p>Lead Guitar</p>
@@ -85,11 +85,18 @@ function Home() {
 
             <div class="col-lg-4">
             <img class="bandmember rounded-circle" src={ivan}></img>
-      
               <h2>Ivan Rivera</h2>
               <p>Drummer</p>
               <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
             </div>
+
+            <div class="col-lg-4">
+              <img class="bandmember rounded-circle" src={laurence}></img>
+              <h2>Laurence J. Colleton</h2>
+              <p>Bass Guitar</p>
+              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div>
+
           </div>
       
           <hr class="featurette-divider"></hr>
