@@ -55,26 +55,26 @@ export default function Event() {
 
         <main className="bg-dark">
             <div className="container ">
-            <section className= "container mx-auto">
-            <div class="row">
-            <h1 className= "text-center pb-20 text-light" style={{ padding: 100 }}>Welcome to the Events Page</h1>
-                {eventData && eventData.map((event, index) => (
-                    <article className= "col-md-4 ">
-                        <Link to={"/event/" + event.slug.current} key={event.slug.current}>
-                            <div className="card bg-light text-white shadow-lg rounded"  key={index}>
-                                <img src={event.mainImage.asset.url} className="card-img" style={{ height: 250 }} alt={event.mainImage.alt}/>
-                                    <div className="card-img-overlay">
-                                        <span className="">
-                                        <h5 className="card-title bg-dark rounded">{event.title}</h5>
-                                        </span>
-                                        
+                <section className="container mx-auto">
+                    <div class="row">
+                        <h1 className="text-center pb-20 text-light" style={{ padding: 100 }}>Welcome to the Events Page</h1>
+                        {eventData && eventData.map((event, index) => (
+                            <article className="col-md-4 ">
+                                <Link to={"/event/" + event.slug.current} key={event.slug.current}>
+                                    <div className="card bg-light text-white shadow-lg rounded" key={index}>
+                                        <img src={event.mainImage.asset.url} className="card-img" style={{ height: 250 }} alt={event.mainImage.alt} />
+                                        <div className="card-img-overlay">
+                                            <span className="">
+                                                <h5 className="card-title bg-dark rounded">{event.title}</h5>
+                                            </span>
+
+                                        </div>
+
                                     </div>
-                                
-                            </div>
-                        </Link>
-                    </article>
-                ))}
-                </div>
+                                </Link>
+                            </article>
+                        ))}
+                    </div>
                 </section>
             </div>
         </main>
