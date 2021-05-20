@@ -19,7 +19,6 @@ Contacts.init(
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
             validate: {
                 isEmail: true,
             },
@@ -27,6 +26,9 @@ Contacts.init(
         message: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        number: {
+            type: DataTypes.STRING
         },
         user_id: {
             type: DataTypes.INTEGER,
