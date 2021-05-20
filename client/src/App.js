@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard"
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Event from "./components/Event";
+import SinglePost from "./components/SinglePost";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         <Route path="/admin" component={Admin} />
         <Route path="/contact" component={Contact} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/events" component={Event} />
+        <Route component={SinglePost} path="/event/:slug"/>
+        <Route exact path="/events" component={Event} />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Footer />
