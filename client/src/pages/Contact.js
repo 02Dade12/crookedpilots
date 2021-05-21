@@ -6,7 +6,7 @@ function Contact() {
     return (
             <div class="container contact-form">
                 <form>
-                    <h3>Reach out to us for bookings and more!</h3>
+                    <h1>Reach out to us for bookings and more!</h1>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

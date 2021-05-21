@@ -9,7 +9,8 @@ import laurence from "./pictures/laurence.jpg";
 import maurico from "./pictures/maurico.jpeg";
 import ivan from "./pictures/ivan.jpeg";
 
-import "./css/homePage.css"
+import "./css/homePage.css";
+
 
 
 function Home() {
@@ -80,7 +81,7 @@ function Home() {
             <img class="bandmember rounded-circle" src={maurico}></img>
               <h2>Maurico Donoso</h2>
               <p>Lead Guitar</p>
-              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+              <button class="btn btn-secondary" href="#" type="button" class="btn btn-secondary" data-container="div" title="Bio" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">View details &raquo;</button>
             </div>
 
             <div class="col-lg-4">
@@ -112,6 +113,7 @@ function Home() {
           </div>
             
         </div>
+        
         </main>
     )
 }

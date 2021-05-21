@@ -53,11 +53,11 @@ export default function Event() {
         //      </div>
         //  </main>
 
-        <main className="bg-dark">
+        <main className="bg-white">
             <div className="container ">
                 <section className="container mx-auto">
                     <div class="row">
-                        <h1 className="text-center pb-20 text-light" style={{ padding: 100 }}>Welcome to the Events Page</h1>
+                        <h1 className="text-center pb-20 text-dark" style={{ padding: 100 }}>Welcome to the Events Page</h1>
                         {eventData && eventData.map((event, index) => (
                             <article className="col-md-4 ">
                                 <Link to={"/event/" + event.slug.current} key={event.slug.current}>
