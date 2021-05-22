@@ -19,5 +19,9 @@ import axios from "axios";
 export default {
     login: function(userInfo) {
         return axios.post('/api/login', userInfo);
+    },
+
+    NewContact: function(contactInfo) {
+        return axios.post('/api/contacts', contactInfo);
     }
 }

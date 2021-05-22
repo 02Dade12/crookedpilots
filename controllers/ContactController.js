@@ -13,14 +13,7 @@ module.exports = {
 
     GetContacts: async function (req, res) {
         try {
-            const all = await Contacts.findAll({
-                include: [
-                    {
-                        model: User,
-                        attributes: ['name']
-                    }
-                ]
-            });
+            const all = await Contacts.findAll();
 
             const contacts = all.map((contacts) => contacts.get({ plain: true }));
 
