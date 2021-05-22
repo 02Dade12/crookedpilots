@@ -4,9 +4,9 @@ import logo from "../pages/pictures/blackLogo.png"
 
 function Navbar() {
     return (
-        <nav className="fixed-top sticky-top navbar navbar-expand-lg navbar-light custom-navbar">
+        <nav className="fixed-top sticky-top navbar navbar-expand-lg navbar-light custom-navbar border-bottom ">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/"><img src={logo} class="rounded-circle logo"></img></a>
+                <a className="navbar-brand" href="/"><img src={logo} class="rounded-circle logo"></img> Crooked Pilots</a>
                 <div className=".justify-content-end">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
