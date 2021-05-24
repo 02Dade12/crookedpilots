@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #151320;
+    /* height: 100vh; */
+   
+    place-items: center center;
+    font-family: 'Poppins',sans-serif;
+}
+.cards{
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    padding: 20px;
+    grid-gap: 40px;
+    
+}
+.cardz{
+    background-color: #1c1b29;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.contain{
+    position: relative;
+    
+
+}
+.img{
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+    
+    /* display: block; */
+    border-radius: 20px 20px 0 0;
+}
+
+.contain:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+/* .card1>.contain:after{
+    background-image: linear-gradient(
+        135deg,
+        #0100ec,
+        #fb36f4
+    );
+} */
+.card2>.contain:after{
+    background-image: linear-gradient(
+        135deg,
+        #2bdce3,
+        #42ffdb
+    );
+}
+.card3>.contain:after{
+    background-image: linear-gradient(
+        135deg,
+        #ffab1d,
+        #f8501c
+    );
+}
+.details{
+    padding: 20px 10px;
+}
+.details>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+.details>h1{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 80px;
+    margin: 10px 0 15px 0;
+}
+.details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.details>.posted{
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.textr{
+    text-align: right;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+   
+   
+}
+
+.background{
+/* Photo by <a href="https://unsplash.com/@seemoris?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Caleb George</a> on <a href="https://unsplash.com/s/photos/guitar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+background-image: url(../pages/pictures/bandbackground.jpg);
+}
+
+.texth{
+    color: #1c1b29 ;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #ffffff;;
+    
+}
+
+.cssborder{
+    border-color: white;
+    border-style: solid;
+    border-width: thick;
+
+}
