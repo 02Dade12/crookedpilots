@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import "./singlePost.css";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -39,7 +40,7 @@ export default function SinglePost() {
 
   return (
     // <main className="bg-gray-700 min-h-screen p-12">
-         
+
     //   <article className="container shadow-lg mx-auto bg-green-100 rounded-lg">
     //     <header className="relative">
     //       <div className="absolute h-full w-full flex items-center justify-center p-8">
@@ -75,34 +76,59 @@ export default function SinglePost() {
     //     </div>
     //   </article>
     // </main>
-    <main className= "container">
-    <div className="jumbotron jumbotron-fluid border border-dark" style={{ padding: 100 }}>
-    <img
-            src={singlePost.mainImage.asset.url}
-            alt={singlePost.title}
-            className="card-img"
-           
-          />
-    <h1 className="display-4 text-center">{singlePost.title}</h1>
-    <img
-                  src={urlFor(singlePost.authorImage).url()}
-                  alt={singlePost.name}
-                  className="rounded-circle mx-auto d-block w-25" 
-                />
-    <p className="lead text-center">Author: {singlePost.name}</p>
-    <hr className="my-4"/>
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    
-  
-    <div>
+
+
+
+    <main className="cardz card1">
+      <div className="contain row">
+        <img
+          src={singlePost.mainImage.asset.url}
+          alt={singlePost.title}
+          className="img col-md-7"/>
+           <div className="details col-md-5">
+        <h1 className="text-center card-title">{singlePost.title}</h1>
+        <h3 className="text-center">Author: {singlePost.name}</h3>
+        <img
+          src={urlFor(singlePost.authorImage).url()}
+          alt={singlePost.name}
+          className="rounded cssborder mx-auto d-block w-75"
+        />
+        
+        </div>
+          
+      
+ 
+
+        
+      </div>
+      <div className="details">
+        <hr className="my-4" />
+
+        <div className="posted">
           <BlockContent
-           blocks={singlePost.body}
-          projectId="8oev449o"
-           dataset="production"
+            blocks={singlePost.body}
+            projectId="8oev449o"
+            dataset="production"
           />
         </div>
-  </div>
-  </main>
+      </div>
+    </main>
+
+
+
+    // <div className="cards">
+    //   <div className="card card1">
+    //       <div className="contain">
+    //           <img src={singlePost.mainImage.asset.url} alt={singlePost.title}/>
+    //       </div>
+    //       <div className="details">
+    //           <h3>Las Vegas</h3>
+    //           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
+    //       </div>
+    //   </div>
+
+
+    //   </div>
 
 
 

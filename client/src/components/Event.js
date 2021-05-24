@@ -53,23 +53,19 @@ export default function Event() {
         //      </div>
         //  </main>
 
-        <main className="bg-white">
+
+        <main className="background">
             <div className="container ">
                 <section className="container mx-auto">
                     <div class="row">
-                        <h1 className="text-center pb-20 text-dark" style={{ padding: 100 }}>Welcome to the Events Page</h1>
+                        <h1 className="text-center pb-20 texth" style={{ padding: 100 }}>Welcome to the Events Page</h1>
                         {eventData && eventData.map((event, index) => (
                             <article className="col-md-4 ">
                                 <Link to={"/event/" + event.slug.current} key={event.slug.current}>
-                                    <div className="card bg-light text-white shadow-lg rounded" key={index}>
-                                        <img src={event.mainImage.asset.url} className="card-img" style={{ height: 250 }} alt={event.mainImage.alt} />
-                                        <div className="card-img-overlay">
-                                            <span className="">
-                                                <h5 className="card-title bg-dark rounded">{event.title}</h5>
-                                            </span>
-
-                                        </div>
-
+                                    <div className="cardz rounded " key={index}>
+                                        <img src={event.mainImage.asset.url} className="card-img img contain" style={{ height: 250 }} alt={event.mainImage.alt} />
+                                        
+                                        <h5 className="textr rounded">{event.title}</h5>
                                     </div>
                                 </Link>
                             </article>
