@@ -9,7 +9,8 @@ import laurence from "./pictures/laurence.jpg";
 import maurico from "./pictures/maurico.jpeg";
 import ivan from "./pictures/ivan.jpeg";
 
-import "./css/homePage.css"
+import "./css/homePage.css";
+
 
 
 function Home() {
@@ -112,6 +113,7 @@ function Home() {
           </div>
             
         </div>
+        
         </main>
     )
 }

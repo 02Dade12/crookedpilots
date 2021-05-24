@@ -1,10 +1,9 @@
 import React from "react";
-import IG from "./icons/instagram.svg"
 
 
 function Footer() {
   return (
-    <footer class="fixed-bottom sticky-bottom navbar navbar-expand-lg navbar-light bg-light">
+    <footer class="fixed-bottom sticky-bottom navbar navbar-expand-lg navbar-light bg-light border-top">
       <div class="col">
         <div class="container-fluid text-center">
           <div class="row row-cols-auto">
