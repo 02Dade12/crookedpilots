@@ -52,7 +52,7 @@ body{
         #fb36f4
     );
 } */
-.card2>.contain:after{
+/* .card2>.contain:after{
     background-image: linear-gradient(
         135deg,
         #2bdce3,
@@ -65,7 +65,7 @@ body{
         #ffab1d,
         #f8501c
     );
-}
+} */
 .details{
     padding: 20px 10px;
 }
