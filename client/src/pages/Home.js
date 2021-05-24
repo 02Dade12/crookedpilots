@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pic1 from "./pictures/pic1.png";
 import band from "./pictures/band.jpg";
 import album1 from "./pictures/album1.png";
@@ -8,12 +8,35 @@ import albumArt3 from "./pictures/albumArt3.png";
 import laurence from "./pictures/laurence.jpg";
 import maurico from "./pictures/maurico.jpeg";
 import ivan from "./pictures/ivan.jpeg";
+import sanityClient from "../client.js";
+import imageUrlBuilder from "@sanity/image-url";
 
 import "./css/homePage.css";
 
 
 
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+  return builder.image(source);
+}
 function Home() {
+
+  const [authorData, setAuthor] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "author"]{
+        name,
+        "bio": bio[0].children[0].text,
+        "authorImage": image.asset->url
+      }`
+      )
+      .then((data) => setAuthor(data))
+      .catch(console.error);
+  }, []);
+
+  if (!authorData) return <div>Loading...</div>;
     return (
         <main>
 
@@ -77,26 +100,28 @@ function Home() {
         <div class="container marketing">
           <div class="row">
 
+          {/* 
+                            <article className="col-md-4 ">
+                                <Link to={"/event/" + event.slug.current} key={event.slug.current}>
+                                    <div className="cardz rounded " key={index}>
+                                        <img src={event.mainImage.asset.url} className="card-img img contain" style={{ height: 250 }} alt={event.mainImage.alt} />
+                                        
+                                        <h5 className="textr rounded">{event.title}</h5>
+                                    </div>
+                                </Link>
+                            </article>
+                         */}
+
+
+
+           {authorData && authorData.map((author, index) => (
           <div class="col-lg-4">
-            <img class="bandmember rounded-circle" src={maurico}></img>
-              <h2>Maurico Donoso</h2>
-              <p>Lead Guitar</p>
-              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            <img class="bandmember rounded-circle" src={urlFor(author.authorImage).url()}></img>
+              <h2>{author.name}</h2>
+              <p>{author.bio}</p>
             </div>
 
-            <div class="col-lg-4">
-            <img class="bandmember rounded-circle" src={ivan}></img>
-              <h2>Ivan Rivera</h2>
-              <p>Drummer</p>
-              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-            </div>
-
-            <div class="col-lg-4">
-              <img class="bandmember rounded-circle" src={laurence}></img>
-              <h2>Laurence J. Colleton</h2>
-              <p>Bass Guitar</p>
-              <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-            </div>
+              ))}
 
           </div>
       
