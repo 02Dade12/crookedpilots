@@ -7,7 +7,10 @@ router.route('/')
 router.route('/login')
     .post(UserController.Login);
 
-router.route('logout')
+router.route('/logout')
     .post(UserController.Logout);
-    
+
+router.route('/auth')
+    .get(UserController.hasSignedIn);
+
 module.exports = router;
