@@ -17,12 +17,21 @@ body{
     grid-gap: 40px;
     
 }
+.cardz2{
+    background-color: #1c1b29;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+    padding: 30px;
+    border-radius: 20px 20px 20px 20px;
+    color: whitesmoke;
+    
+}
 .cardz{
     background-color: #1c1b29;
     box-shadow: 0 0 30px rgba(0,0,0,0.18);
     padding: 30px;
     margin-bottom: 30px;
 }
+
 .contain{
     position: relative;
     
@@ -120,4 +129,7 @@ background-image: url(../pages/pictures/bandbackground.jpg);
     border-style: solid;
     border-width: thick;
 
+}
+.dagrey{
+    background-color: #2a2e40;
 }
