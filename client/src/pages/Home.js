@@ -38,7 +38,7 @@ function Home() {
 
   if (!authorData) return <div>Loading...</div>;
     return (
-        <main>
+        <main className="dagrey">
 
         {/* Carousel Below*/}
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -115,8 +115,8 @@ function Home() {
 
 
            {authorData && authorData.map((author, index) => (
-          <div class="col-lg-4">
-            <img class="bandmember rounded-circle" src={urlFor(author.authorImage).url()}></img>
+          <div class="col-lg-4 cardz2" key={index}>
+            <img class="bandmember  rounded-circle" src={urlFor(author.authorImage).url()}></img>
               <h2>{author.name}</h2>
               <p>{author.bio}</p>
             </div>
@@ -127,7 +127,7 @@ function Home() {
       
           <hr class="featurette-divider"></hr>
       
-          <div class="row featurette">
+          <div class="row featurette cardz2">
             <div class="col-md-7">
               <h2 class="featurette-heading">Delayed Departure </h2>
               <p class="lead">After countless hours of practice and dedication, this is the first studio production created by Crooked Pilots. A special thank you goes out to the friends and family that has supported since this plane has taken flight.</p>
