@@ -53,13 +53,25 @@ module.exports = {
             req.session.destroy(() => {
                 res.status(204).end();
             });
+            res.json({
+                auth: false
+            })
         } else {
             res.status(404).end();
         }
     },
 
     hasSignedIn: async function (req, res) {
-        
+        if (req.session.logged_in) {
+            return res.json({
+                auth: true,
+                message: "You are signed in!"
+            });
+        }
+        return res.json({
+            auth: false,
+            message: "You are not logged in!"
+        });
     }
 };
 

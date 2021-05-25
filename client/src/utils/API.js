@@ -22,7 +22,18 @@ export default {
         return result;
     },
 
-    NewContact: function(contactInfo) {
-        return axios.post('/api/contacts', contactInfo);
+    NewContact: async function(contactInfo) {
+        const result = await axios.post('/api/contacts', contactInfo);
+        return result;
+    },
+
+    hasSignedIn: async function() {
+        const result = await axios.get('/api/users/auth');
+        return result;
+    },
+
+    logout: async function() {
+        const res = await axios.post('/api/users/logout');
+        return res;
     }
 }
