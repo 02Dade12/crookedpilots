@@ -24,8 +24,7 @@ module.exports = {
             });
             if (!userData) {
                 res
-                    .status(400)
-                    .json({ message: 'Incorrect email or password, please try again' });
+                    .json({ message: 'Incorrect email or password, please try again', auth: false });
                 return;
             }
 
@@ -33,8 +32,7 @@ module.exports = {
 
             if (!validPassword) {
                 res
-                    .status(400)
-                    .json({ message: 'Incorrect email or password, please try again' });
+                    .json({ message: 'Incorrect email or password, please try again', auth: false });
                 return;
             }
 
@@ -42,7 +40,7 @@ module.exports = {
                 req.session.user_id = userData.id;
                 req.session.logged_in = true;
 
-                res.json({ user: userData, message: 'You are now logged in!' });
+                res.json({ user: userData, message: 'You are now logged in!', auth: true });
             });
 
         } catch (err) {
@@ -58,6 +56,10 @@ module.exports = {
         } else {
             res.status(404).end();
         }
+    },
+
+    hasSignedIn: async function (req, res) {
+        
     }
 };
 

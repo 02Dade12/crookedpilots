@@ -17,8 +17,9 @@ Contacts
 import axios from "axios";
 
 export default {
-    login: function(userInfo) {
-        return axios.post('/api/login', userInfo);
+    login: async function(userInfo) {
+        const result = await axios.post('/api/users/login', userInfo);
+        return result;
     },
 
     NewContact: function(contactInfo) {
