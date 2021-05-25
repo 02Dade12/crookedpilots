@@ -1,6 +1,6 @@
 import React from "react";
 import "./components.css";
-import logo from "../pages/pictures/blackLogo.png"
+import logo from "../pages/pictures/blackLogo.png";
 
 function Navbar() {
     return (
@@ -13,7 +13,6 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link text-dark" aria-current="/about" href="/">About</a>
                             <a className="nav-link text-dark" href="/events">Events</a>
                             <a className="nav-link text-dark" href="/contact">Contact</a>
                         </div>
