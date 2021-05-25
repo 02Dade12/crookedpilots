@@ -54,48 +54,48 @@ async function getInfo() {
 function Contact() {
     return (
         <div id="modal">
-            <div class="container contact-form">
+            <div className="container contact-form">
                 <form>
                     <h1>Reach out to us for bookings and more!</h1>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" id="name" name="txtName" class="form-control" placeholder="Your Name *" ></input>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="form-group">
+                                <input type="text" id="name" name="txtName" className="form-control" placeholder="Your Name *" ></input>
                             </div>
                             <br></br>
-                            <div class="form-group">
-                                <input type="text" id="email" name="txtEmail" class="form-control" placeholder="Your Email *" ></input>
+                            <div className="form-group">
+                                <input type="text" id="email" name="txtEmail" className="form-control" placeholder="Your Email *" ></input>
                             </div>
                             <br></br>
-                            <div class="form-group">
-                                <input type="text" id="number" name="txtPhone" class="form-control" placeholder="Your Phone Number *" ></input>
+                            <div className="form-group">
+                                <input type="text" id="number" name="txtPhone" className="form-control" placeholder="Your Phone Number *" ></input>
                             </div>
                             <br></br>
-                            <div class="form-group">
-                                <input type="submit" onClick={async (event) => { event.preventDefault(); await getInfo() }} name="btnSubmit" data-toggle="modal" data-target="#exampleModal" class="btnContact" value="Send Message" ></input>
+                            <div className="form-group">
+                                <input type="submit" onClick={async (event) => { event.preventDefault(); await getInfo() }} name="btnSubmit" data-toggle="modal" data-target="#exampleModal" className="btnContact" value="Send Message" ></input>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <textarea name="txtMsg" id="message" class="form-control customTextarea" placeholder="Your Message *" ></textarea>
+                        <div className="col-md-6">
+                            <div className="form-group">
+                                <textarea name="txtMsg" id="message" className="form-control customTextarea" placeholder="Your Message *" ></textarea>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body"></div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                        <div className="modal-body"></div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
