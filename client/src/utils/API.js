@@ -35,5 +35,21 @@ export default {
     logout: async function() {
         const res = await axios.post('/api/users/logout');
         return res;
+    },
+
+    getMessages: async function() {
+        const res = await axios.get('/api/contacts');
+        return res;
+    },
+
+    getMessage: async function(id) {
+        const res = await axios.get('/api/contacts/' + id);
+        return res;
+    },
+
+    deleteMessage: async function(id) {
+        const res = await axios.delete('/api/contacts/' + id);
+        return res;
     }
+
 }

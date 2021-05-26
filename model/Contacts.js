@@ -30,6 +30,11 @@ Contacts.init(
         number: {
             type: DataTypes.STRING
         },
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+          },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

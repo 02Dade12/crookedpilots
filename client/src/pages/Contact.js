@@ -46,9 +46,10 @@ async function getInfo() {
             message.value = '';
             modal.innerHTML = '';
             alert('Your message was saved succesfully. You will hear from us shortly. Thank you!');
+            location.reload();
         }
     }
-    await validate();
+    validate();
 }
 
 function Contact() {
