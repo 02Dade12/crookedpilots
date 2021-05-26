@@ -25,7 +25,7 @@ export default function Event() {
     }, []);
 
     return (
-        <main className="background">
+        <main className="dagrey">
             <div className="container ">
                 <section className="container mx-auto">
                     <div class="row">

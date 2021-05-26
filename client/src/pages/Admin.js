@@ -25,7 +25,7 @@ function Admin() {
     
   }
   return (
-    <div className="admin text-center">
+    <div className="admin text-center dagrey">
       <div className="form-signin">
         <form>
           <h1 className="h3 mb-3 fw-normal ">Admin Portal</h1>

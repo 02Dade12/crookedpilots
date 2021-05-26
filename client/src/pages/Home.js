@@ -32,20 +32,21 @@ function Home() {
       .then((data) => setAuthor(data))
       .catch(console.error);
   }, []);
+  
 
   if (!authorData) return <div>Loading...</div>;
     return (
         <main className="dagrey">
 
         {/* Carousel Below*/}
-        <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+        <div id="myCarousel" className="carousel slide " data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
 
-          <div className="carousel-inner">
+          <div className="carousel-inner img3">
             <div className="carousel-item active">
               <svg className="" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#000000"/></svg>
               <div className="container">
@@ -82,12 +83,12 @@ function Home() {
             
           </div>
 
-          <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <button className="carousel-control-prev homeback" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
           
-          <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <button className="carousel-control-next homenext" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
@@ -115,7 +116,7 @@ function Home() {
               <p className="lead">After countless hours of practice and dedication, this is the first studio production created by Crooked Pilots. A special thank you goes out to the friends and family that has supported since this plane has taken flight.</p>
             </div>
             <div className="col-md-5">
-              <img src={album1}></img>
+              <img src={album1} className="img-feat"></img>
             </div>
           </div>
             
