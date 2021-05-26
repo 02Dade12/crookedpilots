@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import pic1 from "./pictures/pic1.png";
+import crookedPilots from "./pictures/crookedPilots.png";
 import band from "./pictures/band.jpg";
 import album1 from "./pictures/album1.png";
 import albumArt1 from "./pictures/albumArt1.png";
@@ -51,7 +51,7 @@ function Home() {
               <svg className="" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#000000"/></svg>
               <div className="container">
                 <div className="carousel-caption">
-                <img src={pic1} className="align-self-center carousel-background-img"></img>
+                <img src={crookedPilots} className="align-self-center carousel-background-img"></img>
                   <p>"Join us & take flight"</p>
                 </div>
               </div>
