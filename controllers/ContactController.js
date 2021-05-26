@@ -25,21 +25,18 @@ module.exports = {
 
     GetContacter: async function (req, res) {
         try {
-            const contacter = await Contacts.findAll({
+            const contacter = await Contacts.findOne({
                 where: {
-                    user_id: req.params.id,
+                    id: req.params.id,
                 },
                 include: [
                     {
                         model: User,
-                        attributes: ['name']
                     }
                 ]
             });
 
-            const contact = contacter.map((contacter) => contacter.get({ plain: true }));
-
-            res.status(200).json(contact)
+            res.status(200).json(contacter)
         } catch (err) {
             console.log(err)
         }
