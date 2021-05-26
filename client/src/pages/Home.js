@@ -32,6 +32,7 @@ function Home() {
       .then((data) => setAuthor(data))
       .catch(console.error);
   }, []);
+  
 
   if (!authorData) return <div>Loading...</div>;
     return (
@@ -82,7 +83,7 @@ function Home() {
             
           </div>
 
-          <button className="carousel-control-prev homenext" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <button className="carousel-control-prev homeback" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
@@ -115,7 +116,7 @@ function Home() {
               <p className="lead">After countless hours of practice and dedication, this is the first studio production created by Crooked Pilots. A special thank you goes out to the friends and family that has supported since this plane has taken flight.</p>
             </div>
             <div className="col-md-5">
-              <img src={album1}></img>
+              <img src={album1} className="img-feat"></img>
             </div>
           </div>
             
