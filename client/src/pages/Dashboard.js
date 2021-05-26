@@ -47,7 +47,7 @@ function Dashboard() {
                                     <span data-feather="home"></span> Message Board </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="https://crookedpilots.sanity.studio/desk" target="_blank">
+                                <a className="nav-link" href="https://crookedpilots.sanity.studio/" target="_blank">
                                     <span data-feather="file"></span> Sanity Login </a>
                             </li>
                         </ul>
@@ -56,7 +56,7 @@ function Dashboard() {
                 <section className="col-md-3 col-lg-3 messageboard" style={{ marginBottom: '10%' }}>
 
                     <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
-                        <a href="/" className="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                        <a href="/dashboard" className="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
                             <span className="fs-5 fw-semibold">Messages</span>
                         </a>
                         {messages.map(message => (
