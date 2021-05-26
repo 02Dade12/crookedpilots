@@ -37,6 +37,15 @@ body{
     
 
 }
+.homenext{
+    background-color: black;
+    
+}
+
+
+.img3{
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+}
 .img{
     clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
     
@@ -125,11 +134,11 @@ background-image: url(../pages/pictures/bandbackground.jpg);
 }
 
 .cssborder{
-    border-color: white;
+    border-color: #bd7418;
     border-style: solid;
     border-width: thick;
 
 }
 .dagrey{
-    background-color: #2a2e40;
+    background-color: #202d40;
 }
