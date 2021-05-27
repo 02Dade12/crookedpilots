@@ -38,7 +38,7 @@ function Dashboard() {
     return (
         <div className="container-fluid">
             <div className="row">
-                <nav id="sidebarMenu" className="col-md-3 col-lg-3 d-md-block bg-light" style={{ float: 'left', width: 200 }}>
+                <nav id="sidebarMenu" className="col-md-2 d-md-block bg-light" style={{ float: 'left', width: 200 }}>
                     <div className="pt-3">
                         <span>Admin Portal</span>
                         <ul className="nav flex-column">
@@ -53,14 +53,14 @@ function Dashboard() {
                         </ul>
                     </div>
                 </nav>
-                <section className="col-md-3 col-lg-3 messageboard" style={{ marginBottom: '10%' }}>
+                <section className="col-md-4 messageboard" style={{ marginBottom: '10%' }}>
 
                     <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
                         <a href="/dashboard" className="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
                             <span className="fs-5 fw-semibold">Messages</span>
                         </a>
                         {messages.map(message => (
-                            <div key={message.id} className="list-group list-group-flush border-bottom ">
+                            <div key={message.id} className="list-group list-group-flush border-bottom" style={{marginBottom: '%1'}}>
                                 <a className="list-group-item list-group-item-action active " aria-current="true" style={{ marginBottom: 10 }}>
                                     <div>
                                         <h5 className="mb-1">Sender's Name: {message.name}</h5>
@@ -76,7 +76,7 @@ function Dashboard() {
 
                 </section>
                 <div className="b-example-divider col-md-1"></div>
-                <div className="col-md-5">
+                <div className="col-md-4">
                     <div> Message: </div>
                     {chosen.length < 1 ? (
                         ''

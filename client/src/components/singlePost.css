@@ -38,12 +38,12 @@ body{
 
 }
 .homenext{
-    background-color: black;
+    background-color: #1c1b29;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 90%);
     
 }
 .homeback{
-    background-color: black;
+    background-color: #1c1b29;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 85%);
     
 }

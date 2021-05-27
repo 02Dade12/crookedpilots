@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect, useLocation } from "react-router-dom";
 import "./css/contactPage.css";
+import background from "../pages/pictures/CPguitars.png"
 import API from "../utils/API"
 
 async function getInfo() {
@@ -28,14 +29,14 @@ async function getInfo() {
         }
         else {
             const info = {
-            name: name.value,
-            email: email.value,
-            number: number.value.toString(),
-            message: message.value
+                name: name.value,
+                email: email.value,
+                number: number.value.toString(),
+                message: message.value
             }
 
             API.NewContact(info);
-            
+
             name.className = "form-control";
             email.className = "form-control";
             number.className = "form-control";
@@ -54,51 +55,36 @@ async function getInfo() {
 
 function Contact() {
     return (
-        <div id="modal">
-            <div className="container contact-form">
-                <form>
-                    <h1>Reach out to us for bookings and more!</h1>
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <input type="text" id="name" name="txtName" className="form-control" placeholder="Your Name *" ></input>
+        <div id="modal" style={{ backgroundImage: `url(${background})`, backgroundSize: 'auto 100%', height: 530 }}>
+            <div >
+                <div className="container contact-form" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+                    <form>
+                        <h1 style={{ color: 'white' }}>Reach out to us for bookings and more!</h1>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <input type="text" id="name" name="txtName" className="form-control" placeholder="Your Name *" ></input>
+                                </div>
+                                <br></br>
+                                <div className="form-group">
+                                    <input type="text" id="email" name="txtEmail" className="form-control" placeholder="Your Email *" ></input>
+                                </div>
+                                <br></br>
+                                <div className="form-group">
+                                    <input type="text" id="number" name="txtPhone" className="form-control" placeholder="Your Phone Number *" ></input>
+                                </div>
+                                <br></br>
                             </div>
-                            <br></br>
-                            <div className="form-group">
-                                <input type="text" id="email" name="txtEmail" className="form-control" placeholder="Your Email *" ></input>
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <textarea name="txtMsg" id="message" className="form-control customTextarea" placeholder="Your Message *" ></textarea>
+                                </div>
                             </div>
-                            <br></br>
-                            <div className="form-group">
-                                <input type="text" id="number" name="txtPhone" className="form-control" placeholder="Your Phone Number *" ></input>
-                            </div>
-                            <br></br>
                             <div className="form-group">
                                 <input type="submit" onClick={async (event) => { event.preventDefault(); await getInfo() }} name="btnSubmit" data-toggle="modal" data-target="#exampleModal" className="btnContact" value="Send Message" ></input>
                             </div>
                         </div>
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <textarea name="txtMsg" id="message" className="form-control customTextarea" placeholder="Your Message *" ></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
-                <div className="modal-dialog" role="document">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body"></div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
