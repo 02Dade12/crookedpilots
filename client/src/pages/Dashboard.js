@@ -28,8 +28,8 @@ function Dashboard() {
             .catch(err => console.log(err))
     };
 
-    function deleteOne(id) {
-        API.deleteMessage(id);
+    async function deleteOne(id) {
+        await API.deleteMessage(id);
         location.reload();
     }
 
