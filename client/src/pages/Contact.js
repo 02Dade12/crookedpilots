@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, useLocation } from "react-router-dom";
 import "./css/contactPage.css";
-import background from "../pages/pictures/CPguitars.png"
+import background from "../pages/pictures/guitars.png"
 import API from "../utils/API"
 
 async function getInfo() {
@@ -11,7 +11,7 @@ async function getInfo() {
     const message = await document.getElementById('message');
     const modal = document.getElementById('modal');
 
-    function validate() {
+    async function validate() {
         if (!name.value) {
             name.className = "form-control is-invalid"
         }
@@ -35,7 +35,7 @@ async function getInfo() {
                 message: message.value
             }
 
-            API.NewContact(info);
+            await API.NewContact(info);
 
             name.className = "form-control";
             email.className = "form-control";
@@ -55,7 +55,7 @@ async function getInfo() {
 
 function Contact() {
     return (
-        <div id="modal" style={{ backgroundImage: `url(${background})`, backgroundSize: 'auto 100%', height: 530 }}>
+        <div id="modal" style={{ backgroundImage: `url(${background})`, backgroundSize: 'auto 100%', height: 730 }}>
             <div >
                 <div className="container contact-form" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
                     <form>
