@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/admin.css";
 import AuthApi from "../utils/AuthApi";
 import API from "../utils/API";
+require('dotenv');
 
 
 
 function Admin() {
+
+  const [use, setUse] = useState();
+
+  useEffect(() => {
+    API.GetUsers()
+      .then(res =>
+        setUse(res)
+      )
+    if (use) {
+      return
+    } else {
+      const login = {
+        name: `${process.env.REACT_APP_ADMIN}`,
+        email: `${process.env.REACT_APP_UN}`,
+        password: `${process.env.REACT_APP_PW}`
+      };
+      API.SignUp(login);
+    }
+
+
+
+  }, [])
+
   const authApi = React.useContext(AuthApi);
 
 
@@ -22,7 +46,7 @@ function Admin() {
       authApi.setAuth(true);
     }
     console.log(res);
-    
+
   }
   return (
     <div className="admin text-center dagrey">

@@ -15,6 +15,13 @@ module.exports = {
         }
     },
 
+    GetUsers: async function (req, res) {
+        const users = await User.findAll();
+        if (users) {
+        res.status(200).json(users);
+        }
+    },
+
     Login: async function (req, res) {
         try {
             const userData = await User.findOne({

@@ -31,7 +31,7 @@ function Navbar() {
                                 <a className="nav-link text-light" href="/events">Events</a>
                                 <a className="nav-link text-light" href="/contact">Contact</a>
                                 <a className="nav-link text-light" href="/dashboard">Dashboard</a>
-                                <a className="nav-link text-light" style={{ cursor: "pointer" }} onClick={handleLogout} href="/">Logout</a>
+                                <a className="nav-link text-light" style={{ cursor: "pointer" }} onClick={handleLogout}>Logout</a>
                             </div>
                         </div>
                     </>)}

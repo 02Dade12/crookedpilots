@@ -60,8 +60,8 @@ function Dashboard() {
                             <span className="fs-5 fw-semibold">Messages</span>
                         </a>
                         {messages.map(message => (
-                            <div key={message.id} className="list-group list-group-flush border-bottom" style={{marginBottom: '%1'}}>
-                                <a className="list-group-item list-group-item-action active " aria-current="true" style={{ marginBottom: 10 }}>
+                            <div key={message.id} className="list-group" style={{marginBottom: '%1'}}>
+                                <a className="list-group-item list-group-item-action active " aria-current="true" style={{ marginBottom: '10%' }}>
                                     <div>
                                         <h5 className="mb-1">Sender's Name: {message.name}</h5>
                                         <p>sent: {moment(message.date).format('LL')}</p>
