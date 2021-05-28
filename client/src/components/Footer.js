@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="fixed-bottom sticky-bottom navbar navbar-expand-lg navbar-light bg-light border-top">
+    <footer className="fixed-bottom sticky-bottom navbar navbar-expand-lg border-top foot">
       <div className="col">
         <div className="container-fluid text-center">
           <div className="row row-cols-auto">
