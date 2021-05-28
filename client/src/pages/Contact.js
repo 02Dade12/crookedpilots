@@ -55,7 +55,7 @@ async function getInfo() {
 
 function Contact() {
     return (
-        <div id="modal" style={{ backgroundImage: `url(${background})`, backgroundSize: 'auto 100%', height: 730 }}>
+        <div id="modal" style={{ backgroundImage: `url(${background})`, backgroundSize: '100%', height: 730 }}>
             <div >
                 <div className="container contact-form" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
                     <form>
