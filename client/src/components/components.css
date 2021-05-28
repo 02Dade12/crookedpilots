@@ -1,9 +1,20 @@
 .custom-navbar {
-    background-color: #e2e2e2;
+    background-color: #1c1b29;
+    color: white;
+    
 }
 
 .logo {
     height: 30px;
     width: 30px;
+    border: white;
 }
-
+.foot {
+    background-color: #1c1b29;
+    color: white;
+    text-align: center;
+}
+.navbar-toggler{
+    background-color: white;
+    
+}

@@ -138,9 +138,9 @@ background-image: url(../pages/pictures/bandbackground.jpg);
 }
 
 .texth{
-    color: #1c1b29 ;
+    color: #ffffff ;
     font-weight: bolder;
-    text-shadow: 1px 1px 2px #ffffff;;
+    text-shadow: 1px 1px 2px #1c1b29;
     
 }
 
