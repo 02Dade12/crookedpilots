@@ -145,11 +145,12 @@ background-image: url(../pages/pictures/bandbackground.jpg);
 }
 
 .cssborder{
-    border-color: #bd7418;
+    border-color: white;
     border-style: solid;
     border-width: thick;
 
 }
 .dagrey{
     background-color: #202d40;
+    padding-bottom: 10vh;
 }
