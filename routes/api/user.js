@@ -2,7 +2,8 @@ const router = require('express').Router();
 const UserController = require('../../controllers/UserController');
 
 router.route('/')
-    .post(UserController.SignUp);
+    .post(UserController.SignUp)
+    .get(UserController.GetUsers);
 
 router.route('/login')
     .post(UserController.Login);

@@ -22,6 +22,16 @@ export default {
         return result;
     },
 
+    SignUp: async function(userInfo) {
+        const result = await axios.post('/api/users/', userInfo);
+        return result;
+    },
+
+    GetUsers: async function() {
+        const result = await axios.get('/api/users/');
+        return result;
+    },
+
     NewContact: async function(contactInfo) {
         const result = await axios.post('/api/contacts', contactInfo);
         return result;
