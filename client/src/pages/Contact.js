@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, useLocation } from "react-router-dom";
 import "./css/contactPage.css";
-import background from "../pages/pictures/guitars.png"
+import background from "../pages/pictures/new.png"
 import API from "../utils/API"
 
 async function getInfo() {
@@ -55,8 +55,13 @@ async function getInfo() {
 
 function Contact() {
     return (
+<<<<<<< HEAD
         <div id="modal" style={{ backgroundImage: `url(${background})`, backgroundSize: '100%', height: 730 }}>
             <div >
+=======
+        <div id="modal" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%', height: 730 }} class="img-fluid">
+            <div className="p-5">
+>>>>>>> b21e9009cca130bc7d96de2189085881e0dc6a62
                 <div className="container contact-form" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
                     <form>
                         <h1 style={{ color: 'white' }}>Reach out to us for bookings and more!</h1>
