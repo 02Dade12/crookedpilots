@@ -36,7 +36,7 @@ function Dashboard() {
 
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" style={{ backgroundColor: 'white'}}>
             <div className="row">
                 <nav id="sidebarMenu" className="col-md-2 d-md-block bg-light" style={{ float: 'left', width: 200 }}>
                     <div className="pt-3">
