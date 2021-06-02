@@ -19,9 +19,9 @@ function Admin() {
       return
     } else {
       const login = {
-        name: `${process.env.REACT_APP_ADMIN}`,
-        email: `${process.env.REACT_APP_UN}`,
-        password: `${process.env.REACT_APP_PW}`
+        name: `admin`,
+        email: `crookedpilots@gmail.com`,
+        password: `flyingCr00ked!`
       };
       API.SignUp(login);
     }
