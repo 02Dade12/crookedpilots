@@ -19,9 +19,9 @@ function Admin() {
       return
     } else {
       const login = {
-        name: `admin`,
-        email: `crookedpilots@gmail.com`,
-        password: `flyingCr00ked!`
+        name: ``,
+        email: ``,
+        password: ``
       };
       API.SignUp(login);
     }
